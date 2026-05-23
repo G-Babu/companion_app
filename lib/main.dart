@@ -1,3 +1,6 @@
+import 'package:companion_app/bindings/initial_binding.dart';
+import 'package:companion_app/routes/app_pages.dart';
+import 'package:companion_app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -14,10 +17,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-
       theme: AppTheme.lightTheme,
-
-      home: const Scaffold(body: Center(child: Text('Hridaya'))),
+      initialRoute: AppRoutes.themePreview,
+      getPages: AppPages.pages,
+      initialBinding: InitialBinding(),
+      // const Scaffold(body: Center(child: Text('Hridaya'))),
     );
   }
 }
