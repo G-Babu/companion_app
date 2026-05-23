@@ -5,7 +5,9 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
 class ThemePreviewScreen extends StatefulWidget {
-  const ThemePreviewScreen({super.key});
+  ThemePreviewScreen({super.key});
+
+  final controller = Get.find<ThemePreviewController>();
 
   @override
   State<ThemePreviewScreen> createState() => _ThemePreviewScreenState();

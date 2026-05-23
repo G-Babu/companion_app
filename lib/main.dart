@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
-      initialRoute: AppRoutes.themePreview,
+      initialRoute: AppRoutes.splash,
       getPages: AppPages.pages,
       initialBinding: InitialBinding(),
       // const Scaffold(body: Center(child: Text('Hridaya'))),
