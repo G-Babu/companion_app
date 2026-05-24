@@ -1,7 +1,9 @@
+import 'package:companion_app/core/storage/storage_service.dart';
 import 'package:companion_app/routes/app_routes.dart';
 import 'package:get/get.dart';
 
 class SplashController extends GetxController {
+  final storage = Get.find<StorageService>();
   @override
   void onInit() {
     super.onInit();
@@ -10,8 +12,7 @@ class SplashController extends GetxController {
   }
 
   void navigateToNextScreen() async {
-    await Future.delayed(const Duration(seconds: 10));
-
-    Get.offNamed(AppRoutes.themePreview);
+    await Future.delayed(const Duration(seconds: 5));
+    Get.offNamed(AppRoutes.login);
   }
 }

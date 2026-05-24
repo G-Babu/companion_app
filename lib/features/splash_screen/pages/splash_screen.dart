@@ -3,15 +3,14 @@ import 'package:companion_app/features/splash_screen/controller/splash_controlle
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class SplashScreen extends StatelessWidget {
-  SplashScreen({super.key});
-
-  final controller = Get.find<SplashController>();
+class SplashScreen extends GetView<SplashController> {
+  const SplashScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
+    final splashController = controller;
 
     return Scaffold(
       body: Container(
